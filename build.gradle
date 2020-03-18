@@ -1,0 +1,49 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.5.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'com.fincity'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
+
+bootRun {
+	main = 'com.fincity.hateoas.HateoasApplication'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// exclude the default implementation of hibernate used by spring boot
+	implementation('org.springframework.boot:spring-boot-starter-data-jpa'){
+		exclude group : 'org.hibernate', module: 'hibernate-entitymanager'
+		exclude group : 'org.hibernate', module: 'hibernate-core'
+	}
+	// include eclipse link jps as hibernate impl should not be used
+	compile group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa', version: '2.7.6'
+	compile group: 'org.mybatis', name: 'mybatis', version: '3.0.1'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.2.5.RELEASE'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-mail', version: '1.2.0.RELEASE'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.2.5.RELEASE'
+	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'mysql:mysql-connector-java'
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}

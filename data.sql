@@ -1,0 +1,11 @@
+INSERT INTO Car (color,manufacturer,model,name,yearofmanufacture) values ('grey','renault','basic','duster','2018');
+INSERT INTO Car (color,manufacturer,model,name,yearofmanufacture) values ('white','renault','highend','duster','2019');
+INSERT INTO Car (color,manufacturer,model,name,yearofmanufacture) values ('red','renault','basic','kwid','2009');
+INSERT INTO Car (color,manufacturer,model,name,yearofmanufacture) values ('green','maruthi','basic','alto','2000');
+INSERT INTO Car (color,manufacturer,model,name,yearofmanufacture) values ('purple','hyundai','highend','creta','2007');
+INSERT INTO Car (color,manufacturer,model,name,yearofmanufacture) values ('grey','ford','medium','figo','2018');
+INSERT INTO Car (color,manufacturer,model,name,yearofmanufacture) values ('black','audi','medium','a4','2012');
+INSERT INTO Car (color,manufacturer,model,name,yearofmanufacture) values ('yellow','tata','basic','tiago','2009');
+INSERT INTO Car (color,manufacturer,model,name,yearofmanufacture) values ('black','tata','basic','nexon','2020');
+INSERT INTO Car (color,manufacturer,model,name,yearofmanufacture) values ('cyan','honda','highend','breeza','2009');
+INSERT INTO Car (color,manufacturer,model,name,yearofmanufacture) values ('grey','jeep','highend','compass','2012');
